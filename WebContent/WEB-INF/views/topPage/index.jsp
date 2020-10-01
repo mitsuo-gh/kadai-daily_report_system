@@ -45,8 +45,3 @@
         <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
     </c:param>
 </c:import>
-<h3> タグの文字（自分の日報　一覧）を少し大きくしたいと思います。style.css の一番下に以下の内容を追記してください。
-
-h3 {
-    font-size: larger;
-}
