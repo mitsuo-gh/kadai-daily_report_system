@@ -30,8 +30,8 @@ public class EmployeesIndexServlet extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         } catch(NumberFormatException e) { }
         List<Employee> employees = em.createNamedQuery("getAllEmployees", Employee.class)
-                                     .setFirstResult(15 * (page - 1))
-                                     .setMaxResults(15)
+                                     .setFirstResult(3 * (page - 1))
+                                     .setMaxResults(3)
                                      .getResultList();
 
         long employees_count = (long)em.createNamedQuery("getEmployeesCount", Long.class)
