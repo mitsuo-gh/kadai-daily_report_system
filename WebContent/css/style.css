@@ -155,3 +155,7 @@ pre {
 h3 {
     font-size: larger;
 }
+span {
+    font-size: 5;
+    font-color: red;
+}

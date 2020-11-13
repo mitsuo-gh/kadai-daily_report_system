@@ -38,6 +38,11 @@
                     </tr>
                 </tbody>
             </table>
+            <form method="post" action="<c:url value='/good/create' />">
+            <input type="hidden" name="good_report_id" value="${report.id}">
+            <button type="submit">いいね！</button>
+            <span><c:out value="${goodCount}"/></span>
+            </form>
 
                 <c:if test="${sessionScope.login_employee.id == report.employee.id}">
                     <p><a href="<c:url value="/reports/edit?id=${report.id}" />">この日報を編集する</a></p>

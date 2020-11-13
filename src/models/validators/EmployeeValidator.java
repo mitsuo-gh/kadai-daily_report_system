@@ -45,7 +45,7 @@ public class EmployeeValidator {
                                              .getSingleResult();
             em.close();
             if(employees_count > 0) {
-                return "入力された社員番号の情報はすでに存在しています。";
+                return "すでに存在している社員番号です。";
             }
         }
 

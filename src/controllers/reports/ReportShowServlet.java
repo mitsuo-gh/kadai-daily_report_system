@@ -1,3 +1,4 @@
+
 package controllers.reports;
 
 import java.io.IOException;
@@ -26,8 +27,13 @@ public class ReportShowServlet extends HttpServlet {
 
         Report r = em.find(Report.class, Integer.parseInt(request.getParameter("id")));
 
+
+         long goodCount = (long)em.createNamedQuery("getGoodCount")
+                              .setParameter("good_report_id", r)
+                              .getSingleResult();
         em.close();
 
+        request.setAttribute("goodCount", goodCount);
         request.setAttribute("report", r);
         request.setAttribute("_token", request.getSession().getId());
 
